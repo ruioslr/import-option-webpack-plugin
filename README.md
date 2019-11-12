@@ -13,6 +13,7 @@ yarn add import-option-webpack-plugin -D
 ## Usage:
 
 **webpack.config.js**
+
 ``` js
 const options = {
     path1: 'demo1',
@@ -31,7 +32,8 @@ module.exports = {
 }
 
 ```
-some-module.js
+
+**some-module.js**
 
 ```js
 import {value as value1} from './{{path1}}';

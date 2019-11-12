@@ -23,7 +23,6 @@ module.exports = class ImportOptionWebpackPlugin {
     }
   
     apply(resolver) {
-  
       resolver.getHook('described-resolve').tapAsync(PLUGIN_NAME, (request, resolveContext, callback) => {
         const innerRequest = request.request || request.path;
         const reg = /{{(.+?)}}/;
@@ -33,7 +32,6 @@ module.exports = class ImportOptionWebpackPlugin {
                 ...request,
                 request: mtpl(innerRequest, this.options),
             }
-            console.log(request)
             return resolver.doResolve('resolve', request, `${PLUGIN_NAME} done`, resolveContext, callback);
         }
         return callback();
