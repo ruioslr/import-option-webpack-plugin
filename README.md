@@ -15,12 +15,11 @@ yarn add import-option-webpack-plugin -D
 **webpack.config.js**
 ``` js
 const options = {
-    demo1: 'demo1',
+    path1: 'demo1',
     deep: {
-        demo2: 'demo2'
+        path2: 'demo2'
     },
-    demo3: 'demo3',
-
+    path3: 'demo3',
 }
 
 module.exports = {
@@ -35,7 +34,7 @@ module.exports = {
 some-module.js
 
 ```js
-import {value as value1} from './{{demo1}}';
-import {value as value2} from './{{deep.demo2}}';
-import {value as value3} from './{{demo3}}/{{demo3}}';
+import {value as value1} from './{{path1}}';
+import {value as value2} from './{{deep.path2}}';
+import {value as value3} from './{{path3}}/{{path3}}';
 ```
