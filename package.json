@@ -1,0 +1,19 @@
+{
+  "name": "import-option-webpack-plugin",
+  "version": "1.0.0",
+  "description": "a webpack plugin to resolve dynamic path in compiling phase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "import"
+  ],
+  "author": "ruios",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.get": "^4.4.2"
+  }
+}
